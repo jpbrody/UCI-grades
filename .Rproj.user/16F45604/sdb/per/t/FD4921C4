@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# excel file of grades requested by Freedom of Information (public records)\n# by Austin Walters http://austingwalters.com/foia-requesting-100-universities/\n\nlibrary(readxl)    \nread_excel_allsheets <- function(filename) {\n  sheets <- readxl::excel_sheets(filename)\n  x <-    lapply(sheets, function(X) readxl::read_excel(filename, sheet = X))\n  names(x) <- sheets\n  x\n}\n\nlibrary(dplyr)\nlibrary(ggplot2)\n\nundergrad <- read_excel_allsheets(\"uci-undergrad.xls.xlsx\")\n\n# grades<-rbind_all(undergrad)\ngrades<-bind_rows(undergrad)\ngrades_gpa <- mutate(grades,GPA = (4*GradeACount+3*GradeBCount+2*GradeCCount+GradeDCount)/(GradeACount+GradeBCount+GradeCCount+GradeDCount+GradeFCount))\ngrades_gpa <- mutate(grades_gpa, Total = GradeACount+GradeBCount+GradeCCount+GradeDCount+GradeFCount)\n\n#GPA by Dept, upper division courses\ndepts <- grades_gpa %>% filter(ClassType=='LEC',Total>40,`Course number`>99) %>% group_by(DepartmentNameByCourseCode) %>% summarize(median(GPA))\n\ngrades_db <- src_sqlite(\"grades_db.splite3\", create= T)\ngrades_sqlite <- copy_to(grades_db,grades_gpa,temporary=FALSE, indexes = list(c(\"Instructor1Name\",\"DepartmentNameByCourseCode\")))\n\n#some plots\nqplot(depts$`median(GPA)`,geom=\"histogram\")\n#ggplot(data=depts)+aes\n\n",
+    "created" : 1460774534119.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "739503771",
+    "id" : "FD4921C4",
+    "lastKnownWriteTime" : 1507088644,
+    "last_content_update" : 1507088644580,
+    "path" : "C:/Users/jpbro/Dropbox/R/UCI-grades/ucigrades.R",
+    "project_path" : "ucigrades.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

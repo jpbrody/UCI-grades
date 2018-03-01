@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1464651134815.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DC861F85",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1464651134815,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "584E4C1",
+        "caption" : "grades_gpa",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=grades_gpa&cache_key=584E4C1",
+        "displayedObservations" : "24507",
+        "environment" : "",
+        "object" : "grades_gpa",
+        "preview" : "0",
+        "totalObservations" : "24507",
+        "variables" : "19"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

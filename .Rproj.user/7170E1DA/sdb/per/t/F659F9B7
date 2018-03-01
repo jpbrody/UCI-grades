@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1508789650040.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F659F9B7",
+    "lastKnownWriteTime" : 8099547404076081522,
+    "last_content_update" : 1508789650040,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "34D37BC",
+        "caption" : "valdez",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=valdez&cache_key=34D37BC",
+        "displayedObservations" : 0,
+        "environment" : "",
+        "object" : "valdez",
+        "preview" : 0,
+        "totalObservations" : 0,
+        "variables" : 19
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

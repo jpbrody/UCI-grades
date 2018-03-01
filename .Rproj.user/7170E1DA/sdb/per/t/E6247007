@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1508789636068.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E6247007",
+    "lastKnownWriteTime" : 3346849036566623844,
+    "last_content_update" : 1508789636068,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "A75E3E4",
+        "caption" : "grades",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=grades&cache_key=A75E3E4",
+        "displayedObservations" : "24507",
+        "environment" : "",
+        "object" : "grades",
+        "preview" : "0",
+        "totalObservations" : "24507",
+        "variables" : "17"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
